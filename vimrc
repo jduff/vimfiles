@@ -17,6 +17,7 @@ autocmd FileType html,xml,xsl,php,jsp,eruby let b:closetag_html_style=1
 autocmd FileType html,xml,xsl,php,jsp,eruby source ~/.vim/scripts/closetag.vim
 autocmd BufRead,BufNewFile *.vm set filetype=velocity
 autocmd BufRead,BufNewFile *.rhtml,*.html.erb set filetype=eruby
+autocmd FileType hl7 source ~/.vim/scripts/hl7-status.vim
 
 " Highlight trailing whitespace
 autocmd FileType * highlight WhitespaceEOL ctermbg=red guibg=red
