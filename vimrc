@@ -1,5 +1,6 @@
 syntax on
 set ruler
+set showcmd
 set showmatch
 set backspace=2
 set laststatus=2
