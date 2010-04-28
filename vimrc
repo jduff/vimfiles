@@ -46,6 +46,7 @@ autocmd FileType * match WhitespaceEOL /\s\+$/
 inoremap <F13> <c-o>$<tab># DEBUG FIXME
 
 map <F6> :NERDTreeToggle<cr>
+map ` :NERDTreeToggle<cr>
 
 " Printing options
 set printoptions=duplex:long,paper:letter
