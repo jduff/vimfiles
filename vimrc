@@ -9,8 +9,26 @@ set modelines=3
 set nohlsearch
 set number
 set listchars=eol:$,tab:>-
-colorscheme zellner
-"colorscheme evening
+set lines=80 columns=130
+" http://items.sjbach.com/319/configuring-vim-right
+set history=1000
+set wildmode=list:longest
+set ignorecase
+set smartcase
+set scrolloff=3
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set shortmess=atI
+set visualbell
+
+
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+
+"colorscheme zellner
+colorscheme railscasts
+"colorscheme sunburst
 
 autocmd FileType * set tabstop=4 shiftwidth=4 softtabstop=4 expandtab autoindent
 autocmd FileType ruby,html,xml,xsl,eruby,yaml,treetop set tabstop=2 shiftwidth=2 softtabstop=2 expandtab autoindent
