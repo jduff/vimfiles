@@ -49,3 +49,14 @@ map <F6> :NERDTreeToggle<cr>
 
 " Printing options
 set printoptions=duplex:long,paper:letter
+
+function! ToggleScratch()
+  if expand('%') == g:ScratchBufferName
+    quit
+  else
+    Sscratch
+  endif
+endfunction
+
+map <leader>s :call ToggleScratch()<CR>
+
