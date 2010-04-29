@@ -48,6 +48,8 @@ inoremap <F13> <c-o>$<tab># DEBUG FIXME
 map <F6> :NERDTreeToggle<cr>
 map ` :NERDTreeToggle<cr>
 
+map <C-t> :FuzzyFinderTextMate<CR>
+
 " Printing options
 set printoptions=duplex:long,paper:letter
 
