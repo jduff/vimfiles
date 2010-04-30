@@ -43,12 +43,28 @@ autocmd FileType hl7 source ~/.vim/scripts/hl7-status.vim
 autocmd FileType * highlight WhitespaceEOL ctermbg=red guibg=red
 autocmd FileType * match WhitespaceEOL /\s\+$/
 
+let mapleader = ","
+
 inoremap <F13> <c-o>$<tab># DEBUG FIXME
 
 map <F6> :NERDTreeToggle<cr>
 map ` :NERDTreeToggle<cr>
 
-map <C-t> :FuzzyFinderTextMate<CR>
+map <leader>t :FuzzyFinderTextMate<CR>
+
+" Simple find that uses vimgrep to search all project files
+function! FindInProject()
+  let pattern = input('Enter search pattern: ')
+
+  execute ':vimgrep ' . pattern . ' **'
+endfunction
+
+
+map <leader>f :call FindInProject()<CR>
+" previous vimgrep result
+map <leader>[ :cp
+" next vimgrep result
+map <leader>] :cn
 
 " Printing options
 set printoptions=duplex:long,paper:letter
