@@ -178,4 +178,6 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
       \ laborum
 
 " Set the screen size to something a bit bigger
-set lines=80 columns=130
+if has("gui_running")
+  set lines=80 columns=130
+endif
