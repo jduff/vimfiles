@@ -13,7 +13,6 @@ set modeline
 set modelines=3
 set number
 set listchars=eol:$,tab:>-
-set lines=80 columns=130
 " http://items.sjbach.com/319/configuring-vim-right
 set history=1000
 set wildmode=list:longest
@@ -178,3 +177,5 @@ command! -nargs=0 Lorem :normal iLorem ipsum dolor sit amet, consectetur
       \ proident, sunt in culpa qui officia deserunt mollit anim id est
       \ laborum
 
+" Set the screen size to something a bit bigger
+set lines=80 columns=130
