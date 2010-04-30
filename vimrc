@@ -87,9 +87,9 @@ endfunction
 
 map <leader>f :call FindInProject()<CR>
 " previous vimgrep result
-map <leader>[ :cp
+map <leader>[ :cp<CR>
 " next vimgrep result
-map <leader>] :cn
+map <leader>] :cn<CR>
 
 " Printing options
 set printoptions=duplex:long,paper:letter
