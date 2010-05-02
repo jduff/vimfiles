@@ -75,7 +75,7 @@ let g:fuzzy_ignore = "log/*, .svn/*, .git/*"
 let g:fuzzy_matching_limit = 70
 map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
-
+map <leader>r :ruby finder.rescan!<CR>
 
 " Simple find that uses vimgrep to search all project files
 function! FindInProject()
