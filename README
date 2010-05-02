@@ -1,0 +1,18 @@
+For Find In Project(,+f) you will need ack installed.
+On OSX the easiest way to do this is with macports, but you could also install the Perl module with CSPAN (just make sure ack is on your path).
+sudo port install p5-app-ack
+
+** NOTE - I've mapped the leader to ','
+
+Some Shortcuts
+` Toggles NERDTree
+
+,+t FuzzyFinderTextMate (cmd+t stlye file search from TextMate)
+,+b FuzzyFinderBuffer (same as above but only searches open buffers)
+,+r Refreshes FuzzyFinder (if you rename or add a file you might need this)
+
+,+f Find in Project (using ack)
+,+[ Previous search result
+,+] Next search result
+** NOTE to scope your search to a dir give the dir name as the second argument to Ack
+ex. ,f RecordNotFound app

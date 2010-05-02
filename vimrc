@@ -20,7 +20,7 @@ set scrolloff=3
 set shortmess=atI
 set visualbell
 set autowrite " Automatically save before commands like :next
-
+set grepprg=ack
 
 " http://github.com/hgimenez/vimfiles/blob/master/vimrc
 
@@ -77,19 +77,20 @@ map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>r :ruby finder.rescan!<CR>
 
-" Simple find that uses vimgrep to search all project files
-function! FindInProject()
-  let pattern = input('Enter search pattern: ')
 
-  execute ':vimgrep ' . pattern . ' **'
+" https://wincent.com/blog/2-hours-with-vim
+function! AckGrep(command)
+  cexpr system("ack " . a:command)
+  cw " show quickfix window already
 endfunction
 
-
-map <leader>f :call FindInProject()<CR>
-" previous vimgrep result
+command! -nargs=+ -complete=file Ack call AckGrep(<q-args>)
+map <leader>f :Ack<space>
+" previous ack result
 map <leader>[ :cp<CR>
-" next vimgrep result
+" next ack result
 map <leader>] :cn<CR>
+
 
 " Printing options
 set printoptions=duplex:long,paper:letter
