@@ -2,6 +2,11 @@ For Find In Project(,+f) you will need ack installed.
 On OSX the easiest way to do this is with macports, but you could also install the Perl module with CSPAN (just make sure ack is on your path).
 sudo port install p5-app-ack
 
+Installation:
+1. Clear out your existing vim config (if any) then run:
+2. git clone git://github.com/jduff/vimfiles.git ~/.vim ; ln -s .vim/vimrc ~/.vimrc
+3. cd ~/.vim; git submodule init; git submodule update
+
 ** NOTE - I've mapped the leader to ','
 
 Some Shortcuts
