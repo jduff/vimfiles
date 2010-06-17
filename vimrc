@@ -34,6 +34,9 @@ set incsearch         " search dynamically as keyword is typed.
 
 
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab autoindent " Set two space tabs:
+if has("autocmd")
+  filetype indent on
+endif
 
 " Fix my seplling
 if exists("+spelllang")
