@@ -95,6 +95,13 @@ map <leader>[ :cp<CR>
 map <leader>] :cn<CR>
 
 
+" shortcut to open vim config
+map ,v :sp $MYVIMRC<CR><C-W>_
+" Shortcut to reload vim config
+map <silent> ,V :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+
+
 " Printing options
 set printoptions=duplex:long,paper:letter
 
