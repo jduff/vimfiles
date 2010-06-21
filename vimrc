@@ -39,6 +39,7 @@ if has("autocmd")
 endif
 
 " Fix my seplling
+set spell
 if exists("+spelllang")
   set spelllang=en_us
 endif
