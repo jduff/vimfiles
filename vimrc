@@ -32,6 +32,7 @@ set smartcase         " search case sensitive when term has a capital letter
 set hlsearch          " Highlight search terms...
 set incsearch         " search dynamically as keyword is typed.
 
+set guioptions-=T     " Remove Toolbar
 
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab autoindent " Set two space tabs:
 if has("autocmd")
