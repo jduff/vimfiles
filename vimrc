@@ -82,6 +82,8 @@ map <leader>t :FuzzyFinderTextMate<CR>
 map <leader>b :FuzzyFinderBuffer<CR>
 map <leader>r :ruby finder.rescan!<CR>
 
+" Clear highlighted text from searches
+map <silent> <Leader>h :silent :noh<CR>
 
 " https://wincent.com/blog/2-hours-with-vim
 function! AckGrep(command)
@@ -101,21 +103,6 @@ map <leader>] :cn<CR>
 map ,v :sp $MYVIMRC<CR><C-W>_
 " Shortcut to reload vim config
 map <silent> ,V :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
-
-
-" Printing options
-set printoptions=duplex:long,paper:letter
-
-function! ToggleScratch()
-  if expand('%') == g:ScratchBufferName
-    quit
-  else
-    Sscratch
-  endif
-endfunction
-
-map <leader>s :call ToggleScratch()<CR>
 
 """""""""""""""""""""""""""""""""
 " line wrapping and movements
